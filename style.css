@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Gray Border bottom for all Sections */
+.bb {
+   border-bottom: 6px solid #4141418f;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+.header {
+    padding: 10px 5%;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("images/header-image.jpg");
+    /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%) url("images/header-image.jpg"); */
+    background-size: cover;
+    background-size: 125%;
+    background-position: 50%;
+    position: relative;
+}
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    padding: 7px 20px;
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.language {
+    padding: 7px 10px;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+#e {
+    display: none;
+}
+.language img {
+    width: 10px;
+    margin-left: 5px;
+}
+
+#login-btn {
+    /* to make button to the right side of language button */
+     display: inline-block; 
+}
+
+.header-content {
+    width: 80%;
+    margin-top: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.header-content h1 {
+    width: 100%;
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: 600;
+}
+.header-content h3 {
+    margin: 22px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.email-signup {
+    margin-top: 20px;
+    background-color: transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.email-signup input {
+    padding: 13px 20px;
+    margin-left: 20px;
+    width: 350px;
+    outline: 0;
+    border: 1px solid #ffffffb7;
+    border-radius: 4px;
+    background-color: #1313138e;
+    color: #fff;
+    font-size: 16px;
+}
+.email-signup input:focus {
+    box-shadow: 0 0 0 2px #fff;
+}
+.email-signup input::placeholder {
+    color: #ffffffb9;
+}
+.email-signup button {
+    padding: 13px 25px;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    background-color: #db0001;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ==== Features Section ==== */
+.features {
+    padding: 50px 0;
+    font-size: 22px;
+}
+.row {
+    padding: 0 50px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    flex-wrap: wrap;
+}
+.text-col {
+    min-width: 350px;
+    margin-bottom: 30px;
+    flex-basis: 50%;
+}
+.img-col {
+    margin-bottom: 20px;
+    flex-basis: 50%;
+}
+.img-col img {
+    margin: auto;
+    width: 90%;
+}
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ==== FAQ Section START ==== */
+.faq-section {
+    padding: 10px 12px;
+    font-size: 18px;
+    text-align: center
+}
+.faq-section h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.questions {
+    margin: 40px auto;
+    max-width: 90%;
+}
+.questions li {
+    padding: 4px;
+    list-style: none;
+    width: 100%;
+}
+.questions li label {
+   padding: 20px; 
+   display: flex;
+   align-items: center;
+   font-size: 22px;
+   font-weight: 500;
+   background-color: #414141;
+   position: relative;
+   cursor: pointer;
+   user-select: none;
+   margin-bottom: 1px;
+   text-align: start;
+   transition: 0.2s;
+}
+.questions li label:hover {
+    background-color: #777777;
+}
+.questions li label::after {
+    content: '+';
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    transition: 0.3s;
+}
+input[type='radio'] {
+    display: none;
+}
+.questions .content {
+    padding: 0 20px;
+    max-height: 0;
+    font-size: 20px;
+    background-color: #414141;
+    text-align: start;
+    overflow: hidden;
+    transition: padding 0.2s, max-height 0.4s;
+}
+.questions .content P {
+    margin: 10px 0;
+}
+.questions input[type="radio"]:checked + label + .content {
+    padding: 15px 20px;
+    max-height: 600px;
+}
+.questions input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+.faq-section .email-signup {
+    margin: 20px auto 60px;
+}
+small {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+/* ==== QnA using details tag ==== */
+
+details {
+    width: 100%;
+    padding: 4px;
+    background-color: transparent;
+    transition: ease 1s;
+    
+}
+details summary::marker {
+    visibility: none;
+  }
+details summary{
+    margin-bottom: 1px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #414141;
+    text-align: start;
+    transition: ease 1s;
+    list-style: none;
+}
+details p {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #414141;
+    text-align: start;
+    transition: ease 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==== RESPONSIVE DESIGN  STARTS HERE A==== */
+
+@media (max-width: 850px) {
+    
+    .header-content {
+        top: 40%;
+    }
+    .header-content h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-top: 0;
+    }
+
+    /* .email-signup button {
+        padding: 13px 18px;
+        background-color: #db0001;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    } */
+    .row {
+        padding: 0 50px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+    .text-col {
+        margin-top: 2em;
+    }
+
+}
+
+
+
+@media (max-width: 650px) {
+    .header {
+        /* height: 100vh; */
+        /* padding: 3rem; */
+    }
+    #lang {
+        display: none;
+    }
+    #e {
+        display: inline;
+    }
+    .email-signup {
+        flex-direction: column;
+    }
+    .email-signup input {
+        width: 70vw;
+        max-width: 350px;
+    }
+    .features h2, .faq-section h2 {
+        font-size: 2rem;
+    }
+    .row {
+        padding: 0 20px;
+    }
+    .text-col {
+        min-width: 200px;
+        margin-bottom: 10px;
+    }
+    .questions li label {
+        padding: 15px;
+        font-weight: 300;
+    }
+}
+
